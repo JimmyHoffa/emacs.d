@@ -3,7 +3,7 @@
 ;;; Made by hand and parsed some from old spacemacs junk
 ;;;
 ;;; Code:
-(require '~/my-emacs/new-init.el)
+(require '~/.emacs.d/my-emacs/new-init.el)
 
 (provide 'init)
 ;;; init ends here

@@ -1,4 +1,4 @@
-;; ;; (require 'package)
+(require 'package)
 
 
 ;; ;; (package-initialize)

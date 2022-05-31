@@ -5,6 +5,9 @@
 (straight-use-package 'helm)
 (straight-use-package 'powerline)
 ;;(straight-use-package 'proceed)
+
+(straight-use-package 'vterm)
+
 (straight-use-package 'spinner)
 (straight-use-package 'helm-ag)
 (straight-use-package 'which-key)

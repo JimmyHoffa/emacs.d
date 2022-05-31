@@ -14,6 +14,33 @@
   (newline)
   (yank))
 
+;;; For TTY consoles -- This makes no sense of working
+;; (define-key input-decode-map "\e[A" [C-up])
+;; (define-key input-decode-map "\e[B" [C-down])
+;; (define-key input-decode-map "\e\e[C" [C-right])
+;; (define-key input-decode-map "\e[D" [C-left])
+
+;;; For terminal
+(define-key input-decode-map "\e[1;5A" [C-up])
+(define-key input-decode-map "\e[1;2A" [S-up])
+(define-key input-decode-map "\e[1;6A" [C-S-up])
+
+(define-key input-decode-map "\e[1;5B" [C-down])
+(define-key input-decode-map "\e[1;2B" [S-down])
+(define-key input-decode-map "\e[1;6B" [C-S-down])
+
+(define-key input-decode-map "\e[1;5C" [C-right])
+(define-key input-decode-map "\e[1;6C" [C-S-right])
+
+(define-key input-decode-map "\e[1;5D" [C-left])
+(define-key input-decode-map "\e[1;6D" [C-S-left])
+
+(define-key input-decode-map "\e[1;5F" [C-end])
+(define-key input-decode-map "\e[1;6F" [C-S-end])
+
+(define-key input-decode-map "\e[1;5H" [C-home])
+(define-key input-decode-map "\e[1;6H" [C-S-home])
+
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 (define-prefix-command 'menu-key-map-cmd)
@@ -48,6 +75,8 @@
 (global-set-key (kbd "M-m p p") 'helm-projectile)
 (global-set-key (kbd "M-m p i") 'projectile-invalidate-cache)
 (global-set-key (kbd "M-m p f") 'helm-projectile-find-file-dwim)
+(global-set-key (kbd "<home>") 'beginning-of-line)
+(global-set-key (kbd "<end>") 'end-of-line)
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\C-xh" 'help-command)
 (keyboard-translate ?\C-h ?\C-?)

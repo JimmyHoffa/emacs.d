@@ -5,7 +5,7 @@
 
 ;;; Code:
 
-(require '~/my-emacs/my-load-path.el)
+(require '~/.emacs.d/my-emacs/my-load-path.el)
 
 (require 'pkg-mgt)
 (require 'my-packages)
@@ -21,5 +21,7 @@
 (require 'old-init)
 (require 'my-keys)
 
-(provide '~/my-emacs/new-init.el)
+(setq indent-tabs-mode nil)
+
+(provide '~/.emacs.d/my-emacs/new-init.el)
 ;;; new-init ends here

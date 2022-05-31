@@ -1,3 +1,3 @@
-(add-to-list 'load-path "~/my-emacs")
-(provide '~/my-emacs/my-load-path.el)
+(add-to-list 'load-path "~/.emacs.d/my-emacs")
+(provide '~/.emacs.d/my-emacs/my-load-path.el)
 ;;; my-load-path ends here

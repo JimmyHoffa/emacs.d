@@ -1,33 +1,5 @@
-;; (custom-set-variables
-;;  ;; custom-set-variables was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  '(custom-safe-themes
-;;    (quote
-;;     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
-;;  '(helm-mode nil)
-;;  '(ido-vertical-mode nil)
-;;  '(package-selected-packages
-;;    (quote
-;;     (powerline proceed spinner helm-ag which-key rainbow-delimiters markdown-mode company undo-tree winum helm-projectile projectile tide helm-swoop swoop solarized-theme flycheck helm))))
-;; (custom-set-faces
-;;  ;; custom-set-faces was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  )
-
-;; (package-initialize)
-;; (unless package-archive-contents
-;;   (package-refresh-contents))
-;; (package-autoremove)
-;; (package-install-selected-packages)
-
-;;(push "~/.spacemacs.d/lisp/" load-path)
-;;(require 'company-simple-complete)
-;;(require 'solarized-dark-theme)
-;;(require 'add-node-modules-path)
+;;; old-init --- previous init with basic preferences for me
+;;; Commentary: Trying to cflean this up but have basic preferences around set and font and theme etc
 
 (powerline-default-theme)
 ;;(scroll-bar-mode -1)
@@ -39,9 +11,13 @@
 (global-undo-tree-mode)
 (winum-mode)
 (projectile-mode)
-(load-theme `solarized-dark t)
-(set-face-attribute 'default nil :font "Terminus-14" )
-(set-frame-font "Terminus-14" nil t)
+(load-theme `solarized-selenized-black t)
+;; (load-theme `solarized-dark t)
+(set-face-attribute 'default nil :font "Terminus-16" )
+(set-frame-font "Terminus-16" nil t)
+;; For mac:
+;; (set-face-attribute 'default nil :font "Terminus (TTF) 14" )
+;; (set-frame-font "Terminus (TTF) 14" nil t)
 (setq backup-directory-alist `(("." . "~/.emacs.bak")))
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook #'show-paren-mode)
@@ -51,6 +27,8 @@
       typescript-indent-level 2
       solarized-high-contrast-mode-line 't
       solarized-distinct-fringe-background 't
+      sh-indentation 2
+      sh-basic-offset 2
       ;; haskell-indent-spaces 2
       ;; haskell-compile-cabal-build-command "cd \"%s\" && stack build"
       ;; haskell-process-type 'stack-ghci
