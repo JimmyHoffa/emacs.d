@@ -24,6 +24,9 @@
 (global-auto-revert-mode)
 
 (setq indent-tabs-mode nil
+      undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo"))
+      auto-save-file-name-transforms `((".*" "~/.emacs.d/saves/" t))
+      lock-file-name-transforms `((".*" "~/.emacs.d/locks/" t))
       typescript-indent-level 2
       solarized-high-contrast-mode-line 't
       solarized-distinct-fringe-background 't
@@ -45,6 +48,8 @@
       ;;helm-ag-base-command "ag --ignore-case --nocolor --nogroup"
       ;;projectile-globally-ignored-directories (quote (".idea" ".eunit" ".git" ".hg" ".fslckout" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "node_modules" "bower_components"))
       )
+
+
 
 (provide 'old-init)
 ;;; old-init.el ends here
